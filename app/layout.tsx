@@ -3,6 +3,7 @@ import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 import { BUSINESS, SITE_URL } from "@/lib/site";
 import { jsonLd, localBusinessSchema } from "@/lib/schema";
+import { AnalyticsHead, AnalyticsNoScript } from "@/components/Analytics";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -92,8 +93,10 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <AnalyticsNoScript />
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(localBusinessSchema)} />
+        <AnalyticsHead />
       </body>
     </html>
   );

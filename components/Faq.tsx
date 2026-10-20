@@ -1,5 +1,6 @@
 import { ArrowRight, Plus } from "lucide-react";
-import { BUSINESS, whatsappLinkProps } from "@/lib/site";
+import { BUSINESS } from "@/lib/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export const faqs = [
   {
@@ -52,9 +53,9 @@ export function Faq() {
           <p className="mt-4 leading-relaxed">
             Se não encontrar sua resposta, nossa equipe está pronta para ajudar pelo WhatsApp.
           </p>
-          <a {...whatsappLinkProps} className="link-arrow mt-6">
+          <WhatsAppLink cta="faq_contact" className="link-arrow mt-6">
             Falar com a equipe <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </a>
+          </WhatsAppLink>
         </div>
 
         <div data-reveal data-reveal-delay={120} className="divide-y divide-mist rounded-2xl border border-mist">

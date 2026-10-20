@@ -1,5 +1,5 @@
 import { CircleCheck } from "lucide-react";
-import { whatsappLinkProps } from "@/lib/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const methods = ["PIX", "Cartão de crédito", "Cartão de débito", "Dinheiro"];
 
@@ -28,9 +28,9 @@ export function Payment() {
             Parcelamento conforme condições da empresa. Pagamentos referem-se apenas aos serviços
             da autoescola; taxas estatais são pagas diretamente aos órgãos competentes.
           </p>
-          <a {...whatsappLinkProps} className="btn-sun mt-4">
+          <WhatsAppLink cta="payment_conditions" className="btn-sun mt-4">
             Consultar condições
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </section>

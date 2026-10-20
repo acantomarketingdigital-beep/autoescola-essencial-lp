@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { BUSINESS, whatsappLinkProps } from "@/lib/site";
+import { BUSINESS } from "@/lib/site";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function Footer() {
   return (
@@ -32,13 +33,13 @@ export function Footer() {
             </li>
           ))}
           <li>
-            <a
-              {...whatsappLinkProps}
+            <WhatsAppLink
+              cta="footer_whatsapp"
               className="inline-flex items-center gap-2 font-semibold text-navy hover:underline"
             >
               <WhatsAppIcon className="h-4 w-4 text-whats" />
               WhatsApp comercial
-            </a>
+            </WhatsAppLink>
           </li>
         </ul>
 

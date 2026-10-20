@@ -1,4 +1,4 @@
-import { whatsappLinkProps } from "@/lib/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const steps = [
   {
@@ -39,9 +39,9 @@ export function HowItWorks() {
               <br className="hidden sm:block" /> cada etapa com você
             </h2>
           </div>
-          <a {...whatsappLinkProps} className="btn-sun self-start lg:self-auto">
+          <WhatsAppLink cta="how_it_works" className="btn-sun self-start lg:self-auto">
             Quero dar o primeiro passo
-          </a>
+          </WhatsAppLink>
         </div>
 
         <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

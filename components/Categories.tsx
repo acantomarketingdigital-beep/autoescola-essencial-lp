@@ -1,13 +1,23 @@
 import { ArrowRight } from "lucide-react";
-import { whatsappLinkProps } from "@/lib/site";
+import type { CtaKey } from "@/lib/ctas";
+import { WhatsAppLink } from "./WhatsAppLink";
 
-const categories = [
+const categories: Array<{
+  tag: string;
+  title: string;
+  text: string;
+  highlight?: string;
+  cta: string;
+  ctaKey: CtaKey;
+  featured?: boolean;
+}> = [
   {
     tag: "Categoria A",
     title: "Moto",
     text: "Primeira habilitação para motocicletas, com aulas em motos manuais e automáticas.",
     highlight: "Primeira autoescola de Paulínia com moto automática para aulas.",
     cta: "Quero habilitação de moto",
+    ctaKey: "category_moto",
     featured: true,
   },
   {
@@ -15,18 +25,21 @@ const categories = [
     title: "Carro",
     text: "Formação completa para você se preparar para a CNH, com aulas em veículos manuais e automáticos.",
     cta: "Quero habilitação de carro",
+    ctaKey: "category_carro",
   },
   {
     tag: "Categoria A + B",
     title: "Carro e moto",
     text: "Faça o processo para carro e moto com acompanhamento completo até o exame prático.",
     cta: "Quero habilitação A+B",
+    ctaKey: "category_a_plus_b",
   },
   {
     tag: "Já possui CNH?",
     title: "Adição de categoria",
     text: "Adicione a categoria de carro ou motocicleta à sua habilitação.",
     cta: "Adicionar uma categoria",
+    ctaKey: "category_adicao",
   },
 ];
 
@@ -73,14 +86,14 @@ export function Categories() {
               </h3>
               <p className={`mt-3 leading-relaxed ${c.featured ? "text-white/85" : ""}`}>{c.text}</p>
               {c.highlight && <p className="mt-4 font-medium text-sun">{c.highlight}</p>}
-              <a
-                {...whatsappLinkProps}
+              <WhatsAppLink
+                cta={c.ctaKey}
                 className={`cta-link mt-6 ${
                   c.featured ? "text-sun" : "text-brand"
                 }`}
               >
                 {c.cta} <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
+              </WhatsAppLink>
             </article>
           ))}
         </div>
@@ -99,9 +112,9 @@ export function Categories() {
             Vença o medo de dirigir, recupere a confiança ou aperfeiçoe sua condução com aulas
             personalizadas.
           </p>
-          <a {...whatsappLinkProps} className="btn-sun mt-6">
+          <WhatsAppLink cta="category_habilitados" className="btn-sun mt-6">
             Quero voltar a dirigir
-          </a>
+          </WhatsAppLink>
         </article>
       </div>
     </section>

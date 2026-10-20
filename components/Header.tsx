@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, ShieldCheck, X } from "lucide-react";
-import { BUSINESS, NAV, whatsappLinkProps } from "@/lib/site";
+import { BUSINESS, NAV } from "@/lib/site";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -45,13 +46,13 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            {...whatsappLinkProps}
+          <WhatsAppLink
+            cta="header_whatsapp"
             className="btn hidden bg-whats px-4 py-2 text-white hover:brightness-95 sm:inline-flex"
           >
             <WhatsAppIcon className="h-4 w-4" />
             WhatsApp
-          </a>
+          </WhatsAppLink>
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-navy lg:hidden"
@@ -80,10 +81,10 @@ export function Header() {
               </li>
             ))}
             <li className="pb-3 pt-1">
-              <a {...whatsappLinkProps} className="btn w-full bg-whats text-white">
+              <WhatsAppLink cta="header_mobile_menu" className="btn w-full bg-whats text-white">
                 <WhatsAppIcon className="h-4 w-4" />
                 Falar no WhatsApp
-              </a>
+              </WhatsAppLink>
             </li>
           </ul>
         </nav>

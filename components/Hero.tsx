@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, Check, ShieldCheck } from "lucide-react";
-import { BUSINESS, whatsappLinkProps } from "@/lib/site";
+import { BUSINESS } from "@/lib/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const bullets = [
   "Carro manual e automático",
@@ -39,9 +40,9 @@ export function Hero() {
           </ul>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a {...whatsappLinkProps} className="btn-sun">
+            <WhatsAppLink cta="hero_cta" className="btn-sun">
               Quero começar <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
+            </WhatsAppLink>
             <a href="#categorias" className="btn-outline-light">
               Conhecer as categorias
             </a>

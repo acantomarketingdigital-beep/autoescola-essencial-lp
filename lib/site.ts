@@ -1,11 +1,16 @@
 /**
  * Fonte única de verdade para dados institucionais e de contato.
- * Qualquer CTA de conversão deve usar WHATSAPP_URL (link direto, sem encurtador/redirect).
+ * CTAs de WhatsApp: use <WhatsAppLink cta="..."> (components/WhatsAppLink.tsx) com mensagens em lib/ctas.ts.
+ * Os links são sempre diretos para wa.me (sem encurtador/redirect).
  */
 export const SITE_URL = "https://autoescolaessencial.com.br";
 
-export const WHATSAPP_URL =
-  "https://wa.me/5519999017200?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas!";
+export const WHATSAPP_NUMBER = "5519999017200";
+
+/** Monta o link oficial wa.me com a mensagem pré-preenchida. */
+export function whatsappUrl(message: string) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
 
 export const BUSINESS = {
   name: "Autoescola Essencial",
@@ -44,10 +49,3 @@ export const NAV = [
   { href: "#diferenciais", label: "Diferenciais" },
   { href: "#duvidas", label: "Dúvidas" },
 ] as const;
-
-/** Props padrão para todo link externo de WhatsApp. */
-export const whatsappLinkProps = {
-  href: WHATSAPP_URL,
-  target: "_blank",
-  rel: "noopener noreferrer",
-} as const;

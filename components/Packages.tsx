@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import { whatsappLinkProps } from "@/lib/site";
+import type { CtaKey } from "@/lib/ctas";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const packages = [
   { qty: "02", text: "Revise manobras e corrija pequenos detalhes antes da prova." },
@@ -48,14 +49,14 @@ export function Packages() {
               <p className={`mt-3 text-sm leading-relaxed ${p.featured ? "text-white/85" : ""}`}>
                 {p.text}
               </p>
-              <a
-                {...whatsappLinkProps}
+              <WhatsAppLink
+                cta={`package_${p.qty}` as CtaKey}
                 className={`cta-link mt-6 ${
                   p.featured ? "text-sun" : "text-brand"
                 }`}
               >
                 Consultar condições <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
+              </WhatsAppLink>
             </article>
           ))}
         </div>

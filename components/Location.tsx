@@ -1,6 +1,7 @@
 import { Clock, MapPin, Phone } from "lucide-react";
-import { BUSINESS, whatsappLinkProps } from "@/lib/site";
+import { BUSINESS } from "@/lib/site";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function Location() {
   return (
@@ -53,10 +54,10 @@ export function Location() {
             </div>
           </dl>
 
-          <a {...whatsappLinkProps} className="btn-outline-light mt-8">
+          <WhatsAppLink cta="location_cta" className="btn-outline-light mt-8">
             <WhatsAppIcon className="h-4 w-4" />
             Chamar no WhatsApp
-          </a>
+          </WhatsAppLink>
         </div>
 
         <div data-reveal="right" className="overflow-hidden rounded-2xl bg-white/5 shadow-xl">

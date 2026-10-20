@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { whatsappLinkProps } from "@/lib/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function FinalCta() {
   return (
@@ -15,9 +15,9 @@ export function FinalCta() {
           Fale agora com a equipe da Autoescola Essencial e descubra o melhor caminho para iniciar
           sua habilitação.
         </p>
-        <a {...whatsappLinkProps} className="btn-navy mt-8">
+        <WhatsAppLink cta="final_cta" className="btn-navy mt-8">
           Começar minha habilitação <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </a>
+        </WhatsAppLink>
         <p className="mt-4 text-sm text-navy/80">Atendimento rápido e personalizado pelo WhatsApp.</p>
       </div>
     </section>

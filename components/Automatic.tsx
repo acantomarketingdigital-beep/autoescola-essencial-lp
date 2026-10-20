@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
-import { whatsappLinkProps } from "@/lib/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const bullets = [
   "Menos preocupação com troca de marchas",
@@ -76,9 +76,9 @@ export function Automatic() {
               </li>
             ))}
           </ul>
-          <a {...whatsappLinkProps} className="btn-sun mt-8">
+          <WhatsAppLink cta="automatic_vehicles" className="btn-sun mt-8">
             Quero saber como funciona
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </section>
