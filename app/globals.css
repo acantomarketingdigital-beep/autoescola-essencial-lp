@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white font-sans text-ink antialiased;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6;
   }
+  .eyebrow {
+    @apply font-sans text-xs font-semibold uppercase tracking-[0.18em] text-brand sm:text-sm;
+  }
+  .h-section {
+    @apply font-display text-3xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-4xl lg:text-5xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:text-base;
+  }
+  .btn-sun {
+    @apply btn bg-sun text-navy hover:bg-sun-dark focus-visible:outline-sun;
+  }
+  .btn-outline-light {
+    @apply btn border border-white/80 text-white hover:bg-white/10 focus-visible:outline-white;
+  }
+  .btn-navy {
+    @apply btn bg-navy text-white hover:bg-navy-deep focus-visible:outline-navy;
+  }
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:underline;
+  }
+}
+
+/* Accordion nativo (<details>) */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-icon {
+  transform: rotate(45deg);
 }
