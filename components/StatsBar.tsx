@@ -11,8 +11,8 @@ export function StatsBar() {
   return (
     <section aria-label="Destaques" className="bg-sun">
       <ul className="container-site grid grid-cols-2 gap-x-4 gap-y-6 py-8 lg:grid-cols-4 lg:py-10">
-        {stats.map(({ icon: Icon, title, sub }) => (
-          <li key={title} className="flex items-center gap-3">
+        {stats.map(({ icon: Icon, title, sub }, i) => (
+          <li key={title} data-reveal data-reveal-delay={i * 100} className="flex items-center gap-3">
             <Icon
               className="h-9 w-9 shrink-0 text-navy sm:h-11 sm:w-11"
               strokeWidth={2.2}

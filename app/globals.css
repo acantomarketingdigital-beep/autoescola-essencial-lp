@@ -25,7 +25,21 @@ section[id] {
     @apply font-display text-3xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-4xl lg:text-5xl;
   }
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:text-base;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition-[transform,background-color,color] duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 motion-safe:hover:scale-105 motion-safe:active:scale-100 sm:text-base;
+  }
+  /* Card com micro-interação de escala (somente transform na transição). */
+  .card-hover {
+    @apply transition-transform duration-300 ease-out motion-safe:hover:scale-105;
+  }
+  /* Link-CTA com seta que desliza no hover. */
+  .cta-link {
+    @apply inline-flex items-center gap-1.5 self-start text-sm font-bold transition-transform duration-200 ease-out hover:underline motion-safe:hover:scale-105;
+  }
+  .cta-link svg {
+    @apply transition-transform duration-200 ease-out;
+  }
+  .cta-link:hover svg {
+    @apply translate-x-1;
   }
   .btn-sun {
     @apply btn bg-sun text-navy hover:bg-sun-dark focus-visible:outline-sun;
@@ -37,7 +51,40 @@ section[id] {
     @apply btn bg-navy text-white hover:bg-navy-deep focus-visible:outline-navy;
   }
   .link-arrow {
-    @apply inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:underline;
+    @apply cta-link text-brand;
+  }
+}
+
+/*
+ * Revelação ao rolar (ver components/RevealObserver.tsx).
+ * Só esconde quando o JS está ativo (classe .js no <html>), então sem JS o conteúdo aparece normalmente.
+ */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+}
+.js [data-reveal="left"] {
+  transform: translate3d(-64px, 0, 0);
+}
+.js [data-reveal="right"] {
+  transform: translate3d(64px, 0, 0);
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

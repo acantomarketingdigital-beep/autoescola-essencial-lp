@@ -4,7 +4,7 @@ import { whatsappLinkProps } from "@/lib/site";
 export function FinalCta() {
   return (
     <section className="border-t-8 border-navy bg-sun py-16 text-center sm:py-24">
-      <div className="container-site">
+      <div data-reveal className="container-site">
         <p className="font-display text-sm font-bold uppercase tracking-wide text-brand">
           O próximo passo é seu
         </p>

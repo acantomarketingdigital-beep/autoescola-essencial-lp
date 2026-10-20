@@ -44,7 +44,7 @@ export function Reviews() {
   return (
     <section id="avaliacoes" className="bg-paper py-16 sm:py-24">
       <div className="container-site">
-        <div className="grid gap-4 lg:grid-cols-2 lg:items-end">
+        <div data-reveal className="grid gap-4 lg:grid-cols-2 lg:items-end">
           <div>
             <p className="eyebrow">Experiência dos alunos</p>
             <h2 className="h-section mt-3">Quem aprende com a Essencial recomenda</h2>
@@ -55,6 +55,7 @@ export function Reviews() {
         </div>
 
         <ul
+          data-reveal
           className="-mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0"
           aria-label="Avaliações de alunos"
         >

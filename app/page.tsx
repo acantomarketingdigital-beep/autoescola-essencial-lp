@@ -11,6 +11,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { Location } from "@/components/Location";
 import { Packages } from "@/components/Packages";
 import { Payment } from "@/components/Payment";
+import { RevealObserver } from "@/components/RevealObserver";
 import { Reviews } from "@/components/Reviews";
 import { StatsBar } from "@/components/StatsBar";
 import { Structure } from "@/components/Structure";
@@ -38,6 +39,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <RevealObserver />
     </>
   );
 }

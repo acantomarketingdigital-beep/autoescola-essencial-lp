@@ -11,16 +11,18 @@ export function Packages() {
   return (
     <section id="pacotes" className="bg-white py-16 sm:py-24">
       <div className="container-site">
-        <div className="mx-auto max-w-3xl text-center">
+        <div data-reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Pacotes preparatórios</p>
           <h2 className="h-section mt-3">Precisa de um reforço antes do exame?</h2>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-3 md:items-center">
-          {packages.map((p) => (
+          {packages.map((p, i) => (
             <article
               key={p.qty}
-              className={`flex flex-col rounded-2xl p-8 ${
+              data-reveal
+              data-reveal-delay={i * 120}
+              className={`card-hover flex flex-col rounded-2xl p-8 ${
                 p.featured ? "bg-navy text-white shadow-xl md:py-12" : "bg-paper"
               }`}
             >
@@ -48,7 +50,7 @@ export function Packages() {
               </p>
               <a
                 {...whatsappLinkProps}
-                className={`mt-6 inline-flex items-center gap-1.5 self-start text-sm font-bold hover:underline ${
+                className={`cta-link mt-6 ${
                   p.featured ? "text-sun" : "text-brand"
                 }`}
               >

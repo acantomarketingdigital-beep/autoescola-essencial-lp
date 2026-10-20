@@ -24,7 +24,7 @@ export function Differentials() {
   return (
     <section id="diferenciais" className="bg-white py-16 sm:py-24">
       <div className="container-site">
-        <div className="mx-auto max-w-3xl text-center">
+        <div data-reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Por que escolher a Essencial?</p>
           <h2 className="h-section mt-3">Tudo o que você precisa para conquistar sua CNH</h2>
         </div>
@@ -33,12 +33,14 @@ export function Differentials() {
           {items.map(({ icon: Icon, title, text }, i) => (
             <li
               key={title}
-              className="group relative rounded-2xl border border-transparent p-6 transition hover:border-mist hover:shadow-lg"
+              data-reveal
+              data-reveal-delay={(i % 4) * 90}
+              className="group relative rounded-2xl border border-transparent p-6 transition-transform duration-300 ease-out hover:border-mist hover:shadow-lg motion-safe:hover:-translate-y-1"
             >
               <span className="absolute right-6 top-6 font-display text-sm font-extrabold text-brand">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <Icon className="h-9 w-9 text-sun" strokeWidth={2.2} aria-hidden="true" />
+              <Icon className="h-9 w-9 text-sun transition-transform duration-300 ease-out motion-safe:group-hover:scale-110" strokeWidth={2.2} aria-hidden="true" />
               <h3 className="mt-5 font-display text-lg font-extrabold leading-tight text-navy">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed">{text}</p>
             </li>

@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy text-white">
       <div className="container-site grid items-center gap-8 pt-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4 lg:pt-14">
-        <div className="pb-4 lg:pb-16">
+        <div className="pb-4 motion-safe:animate-fade-up lg:pb-16">
           <p className="inline-flex items-center gap-2 rounded-full border border-sun/50 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white sm:text-sm">
             <ShieldCheck className="h-4 w-4 shrink-0 text-sun" aria-hidden="true" />
             {BUSINESS.badge}
@@ -52,19 +52,27 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-[260px] self-end sm:max-w-[440px] lg:max-w-[600px]">
+          {/* Halo verde ao fundo, pulsando junto com o LED */}
           <div
-            className="absolute inset-x-1/4 bottom-16 top-1/2 rounded-full bg-[#2BFF4F]/20 blur-3xl"
+            className="absolute inset-x-1/4 bottom-16 top-1/2 rounded-full bg-[#2BFF4F]/25 blur-3xl motion-safe:animate-led-bloom"
             aria-hidden="true"
           />
-          <Image
-            src="/img/semaforo.png"
-            alt="Semáforo verde com a mensagem “Chegou sua hora!”"
-            width={768}
-            height={768}
-            priority
-            sizes="(min-width: 1024px) 600px, 440px"
-            className="relative -mb-[6%] -mt-[8%] h-auto w-full"
-          />
+          <div className="relative -mb-[6%] -mt-[8%]">
+            <Image
+              src="/img/semaforo.png"
+              alt="Semáforo verde com a mensagem “Chegou sua hora!”"
+              width={768}
+              height={768}
+              priority
+              sizes="(min-width: 1024px) 600px, 440px"
+              className="h-auto w-full"
+            />
+            {/* Brilho do LED verde (centro em ~47% / 76% da imagem) */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute left-[47%] top-[76%] -ml-[19%] -mt-[19%] aspect-square w-[38%] rounded-full bg-[radial-gradient(circle,rgba(150,255,140,0.5)_0%,rgba(60,255,90,0.45)_32%,rgba(43,255,79,0)_68%)] will-change-[opacity,transform] motion-safe:animate-led-pulse"
+            />
+          </div>
         </div>
       </div>
     </section>

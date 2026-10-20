@@ -13,7 +13,7 @@ export function WhatsAppFloat() {
         <br />
         <strong>Fale no WhatsApp</strong>
       </span>
-      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-whats text-white shadow-xl transition hover:scale-105">
+      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-whats text-white shadow-xl transition-transform duration-200 ease-out motion-safe:hover:scale-110">
         <WhatsAppIcon className="h-7 w-7" />
       </span>
     </a>

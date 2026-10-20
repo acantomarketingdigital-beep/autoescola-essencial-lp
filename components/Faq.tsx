@@ -44,7 +44,7 @@ export function Faq() {
   return (
     <section id="duvidas" className="bg-white py-16 sm:py-24">
       <div className="container-site grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-        <div>
+        <div data-reveal>
           <p className="font-display text-sm font-bold uppercase tracking-wide text-brand">
             Perguntas frequentes
           </p>
@@ -57,7 +57,7 @@ export function Faq() {
           </a>
         </div>
 
-        <div className="divide-y divide-mist rounded-2xl border border-mist">
+        <div data-reveal data-reveal-delay={120} className="divide-y divide-mist rounded-2xl border border-mist">
           {faqs.map((f, i) => (
             <details key={f.q} className="group" open={i === 0}>
               <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 font-bold text-navy hover:bg-paper sm:px-6">

@@ -4,7 +4,10 @@ export function About() {
   return (
     <section id="sobre" className="bg-mist py-16 sm:py-24">
       <div className="container-site grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[2.5rem] shadow-xl lg:max-w-none">
+        <div
+          data-reveal="left"
+          className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[2.5rem] shadow-xl lg:max-w-none"
+        >
           <Image
             src="/img/fachada.png"
             alt="Fachada da Autoescola Essencial com carros e motos de aula em Paulínia/SP"
@@ -14,7 +17,7 @@ export function About() {
           />
         </div>
 
-        <div>
+        <div data-reveal="right">
           <p className="eyebrow">Sobre a Autoescola Essencial</p>
           <h2 className="h-section mt-3">Mais do que formar motoristas, realizamos sonhos.</h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed sm:text-[17px]">

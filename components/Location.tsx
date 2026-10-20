@@ -6,7 +6,7 @@ export function Location() {
   return (
     <section id="localizacao" className="bg-navy py-16 text-white sm:py-24">
       <div className="container-site grid gap-10 lg:grid-cols-2 lg:items-center">
-        <div>
+        <div data-reveal="left">
           <p className="font-display text-sm font-bold uppercase tracking-wide text-sun">
             Localização e atendimento
           </p>
@@ -59,7 +59,7 @@ export function Location() {
           </a>
         </div>
 
-        <div className="overflow-hidden rounded-2xl bg-white/5 shadow-xl">
+        <div data-reveal="right" className="overflow-hidden rounded-2xl bg-white/5 shadow-xl">
           <iframe
             title="Mapa: localização da Autoescola Essencial em Paulínia/SP"
             src={BUSINESS.mapsEmbed}

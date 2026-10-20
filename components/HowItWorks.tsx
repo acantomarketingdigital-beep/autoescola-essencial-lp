@@ -31,7 +31,7 @@ export function HowItWorks() {
   return (
     <section id="como-funciona" className="bg-paper py-16 sm:py-24">
       <div className="container-site">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div data-reveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="eyebrow">Como funciona</p>
             <h2 className="h-section mt-3">
@@ -46,7 +46,12 @@ export function HowItWorks() {
 
         <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s, i) => (
-            <li key={s.title} className="rounded-2xl bg-white p-6 shadow-sm">
+            <li
+              key={s.title}
+              data-reveal
+              data-reveal-delay={(i % 3) * 110}
+              className="rounded-2xl bg-white p-6 shadow-sm transition-transform duration-300 ease-out motion-safe:hover:-translate-y-1"
+            >
               <span className="font-display text-sm font-extrabold text-navy">
                 {String(i + 1).padStart(2, "0")}
               </span>

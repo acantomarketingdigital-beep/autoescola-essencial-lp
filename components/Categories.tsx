@@ -34,7 +34,7 @@ export function Categories() {
   return (
     <section id="categorias" className="bg-paper py-16 sm:py-24">
       <div className="container-site">
-        <div className="grid gap-4 lg:grid-cols-2 lg:items-end">
+        <div data-reveal className="grid gap-4 lg:grid-cols-2 lg:items-end">
           <div>
             <p className="eyebrow">Categorias e serviços</p>
             <h2 className="h-section mt-3">Encontre a habilitação ideal para você</h2>
@@ -46,10 +46,12 @@ export function Categories() {
         </div>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {categories.map((c) => (
+          {categories.map((c, i) => (
             <article
               key={c.title}
-              className={`flex flex-col rounded-2xl border p-7 sm:p-8 ${
+              data-reveal
+              data-reveal-delay={i * 120}
+              className={`card-hover flex flex-col rounded-2xl border p-7 sm:p-8 ${
                 c.featured
                   ? "border-navy bg-navy text-white shadow-lg"
                   : "border-mist bg-white"
@@ -73,7 +75,7 @@ export function Categories() {
               {c.highlight && <p className="mt-4 font-medium text-sun">{c.highlight}</p>}
               <a
                 {...whatsappLinkProps}
-                className={`mt-6 inline-flex items-center gap-1.5 self-start text-sm font-bold hover:underline ${
+                className={`cta-link mt-6 ${
                   c.featured ? "text-sun" : "text-brand"
                 }`}
               >
@@ -83,7 +85,10 @@ export function Categories() {
           ))}
         </div>
 
-        <article className="mt-5 rounded-2xl border border-mist bg-white p-7 text-center sm:p-10">
+        <article
+          data-reveal
+          className="card-hover mt-5 rounded-2xl border border-mist bg-white p-7 text-center motion-safe:hover:scale-[1.02] sm:p-10"
+        >
           <p className="font-display text-sm font-bold uppercase tracking-wide text-navy">
             Volte com confiança
           </p>

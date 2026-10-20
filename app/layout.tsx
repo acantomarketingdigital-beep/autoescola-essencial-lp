@@ -98,7 +98,17 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${manrope.variable} ${montserrat.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${manrope.variable} ${montserrat.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Marca que o JS está ativo: só então os elementos [data-reveal] começam ocultos. */}
+        <script
+          dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
+        />
+      </head>
       <body>
         {children}
         <script
