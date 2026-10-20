@@ -12,15 +12,15 @@ const faqs = [
   },
   {
     q: "A autoescola é credenciada?",
-    a: `Sim. Somos um Centro de Formação de Condutores (CFC) privado, devidamente credenciado ao DETRAN sob o nº ${BUSINESS.cfcNumber}. Não somos um órgão público.`,
+    a: `Sim. Somos um Centro de Formação de Condutores (CFC) privado, devidamente credenciado sob o nº ${BUSINESS.cfcNumber}. Não somos um órgão público.`,
   },
   {
     q: "A Essencial realiza os exames ou emite a CNH?",
-    a: "Não. Os exames oficiais (teórico e prático) são aplicados pelo DETRAN, e a emissão da CNH é feita exclusivamente pelo órgão de trânsito. Nosso papel é a formação, a preparação para o exame prático do DETRAN e o encaminhamento do aluno.",
+    a: "Não. Os exames oficiais (teórico e prático) são aplicados pelo órgão oficial de trânsito, que também é o único responsável pela emissão da CNH. Nosso papel é a formação, a preparação para o exame prático oficial e o encaminhamento do aluno.",
   },
   {
-    q: "As taxas do DETRAN estão incluídas nos valores?",
-    a: "Não. Serviços e taxas públicas são de competência exclusiva dos órgãos oficiais e pagos diretamente a eles. Os valores informados pela autoescola referem-se apenas aos nossos serviços de formação.",
+    q: "As taxas estatais estão incluídas nos valores?",
+    a: "Não. Serviços e taxas estatais são de responsabilidade exclusiva dos órgãos competentes e pagos diretamente a eles. Os valores informados pela autoescola referem-se apenas aos nossos serviços de formação.",
   },
   {
     q: "Nunca dirigi. Posso começar do zero?",

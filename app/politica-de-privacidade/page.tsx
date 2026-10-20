@@ -23,7 +23,7 @@ export default function PoliticaDePrivacidade() {
       <h2>1. Quem somos</h2>
       <p>
         A Autoescola Essencial é uma empresa privada, Centro de Formação de Condutores (CFC)
-        credenciado ao DETRAN sob o nº {BUSINESS.cfcNumber}. Não somos um órgão público e não
+        credenciado sob o nº {BUSINESS.cfcNumber}. Não somos um órgão público e não
         coletamos, por meio deste site, dados para fins de processos oficiais de habilitação.
       </p>
 
@@ -31,7 +31,7 @@ export default function PoliticaDePrivacidade() {
       <ul>
         <li>
           <strong>Dados fornecidos por você:</strong> nome, telefone e informações que você enviar
-          voluntariamente ao nos contatar pelo WhatsApp, telefone ou e-mail.
+          voluntariamente ao nos contatar pelo WhatsApp ou telefone.
         </li>
         <li>
           <strong>Dados de navegação:</strong> endereço IP, tipo de navegador, páginas acessadas,
@@ -52,7 +52,7 @@ export default function PoliticaDePrivacidade() {
 
       <h2>4. Compartilhamento</h2>
       <p>
-        Não vendemos dados pessoais. Podemos compartilhá-los apenas com: (i) órgãos de trânsito e
+        Não vendemos dados pessoais. Podemos compartilhá-los apenas com: (i) órgãos competentes e
         autoridades, quando exigido por lei ou necessário ao processo de formação contratado;
         (ii) prestadores de serviço que nos apoiam (hospedagem, mensageria, ferramentas de
         medição), sob dever de confidencialidade; (iii) mediante ordem judicial ou requisição de
@@ -93,7 +93,7 @@ export default function PoliticaDePrivacidade() {
       <h2>9. Contato do controlador</h2>
       <p>
         Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato pelo
-        e-mail <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>, pelos telefones{" "}
+        WhatsApp ou pelos telefones{" "}
         {BUSINESS.phones.map((p) => p.label).join(" / ")} ou presencialmente em nosso endereço.
         Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).
       </p>

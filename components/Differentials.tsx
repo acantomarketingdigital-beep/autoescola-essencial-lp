@@ -15,7 +15,7 @@ const items = [
   { icon: CarFront, title: "Veículos novos e modernos", text: "Frota bem cuidada, com opções manuais e automáticas." },
   { icon: CalendarCheck, title: "Agendamento de aulas facilitado", text: "Mais praticidade para encaixar as aulas na sua rotina." },
   { icon: ClipboardCheck, title: "Acompanhamento completo", text: "Orientação clara em todas as etapas do processo." },
-  { icon: FileCheck2, title: "Preparação para exames", text: "Treinamento focado para você chegar mais confiante ao exame do DETRAN." },
+  { icon: FileCheck2, title: "Preparação para exames", text: "Treinamento focado para você chegar mais confiante ao exame prático oficial." },
   { icon: MessageCircle, title: "Atendimento rápido", text: "Tire suas dúvidas e receba suporte pelo WhatsApp." },
   { icon: Building2, title: "Ambiente confortável", text: "Uma estrutura moderna pensada para acolher você." },
 ];

@@ -47,8 +47,7 @@ export function Hero() {
             </a>
           </div>
           <p className="mt-4 text-xs text-white/70 sm:text-sm">
-            Atendimento para alunos de Paulínia e região. Empresa privada, sem vínculo com o DETRAN
-            além do credenciamento como CFC.
+            Atendimento para alunos de Paulínia e região. Empresa privada — CFC Credenciado nº 027.
           </p>
         </div>
 

@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: "Exames médico e psicológico",
-    text: "Orientamos você sobre os exames exigidos, realizados por clínicas credenciadas ao DETRAN.",
+    text: "Orientamos você sobre os exames exigidos, realizados por clínicas credenciadas pelo órgão oficial de trânsito.",
   },
   {
     title: "Aulas teóricas e práticas",
@@ -19,11 +19,11 @@ const steps = [
   },
   {
     title: "Preparação para o exame prático",
-    text: "Preparação para o exame prático do DETRAN e encaminhamento do aluno.",
+    text: "Preparação para o exame prático oficial e encaminhamento do aluno.",
   },
   {
     title: "Rumo à sua CNH",
-    text: "Após a aprovação no exame aplicado pelo DETRAN, a CNH é emitida pelo órgão de trânsito.",
+    text: "Após a aprovação no exame prático oficial, a CNH é emitida pelo órgão oficial de trânsito.",
   },
 ];
 
@@ -57,8 +57,8 @@ export function HowItWorks() {
         </ol>
 
         <p className="mt-6 text-center text-xs leading-relaxed sm:text-sm">
-          Os exames oficiais, os prazos e as taxas públicas (DETRAN) são definidos e cobrados
-          exclusivamente pelos órgãos de trânsito, não pela autoescola.
+          Os exames oficiais, os prazos e as taxas estatais são definidos e cobrados exclusivamente
+          pelos órgãos competentes, não pela autoescola.
         </p>
       </div>
     </section>

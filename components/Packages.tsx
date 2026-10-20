@@ -58,7 +58,7 @@ export function Packages() {
           ))}
         </div>
         <p className="mt-6 text-center text-xs sm:text-sm">
-          Valores dos pacotes informados pelo WhatsApp. Não incluem taxas do DETRAN.
+          Valores dos pacotes informados pelo WhatsApp. Não incluem taxas estatais.
         </p>
       </div>
     </section>

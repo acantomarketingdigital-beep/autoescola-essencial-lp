@@ -29,13 +29,13 @@ export function About() {
             </p>
             <p>
               Aqui, você recebe acompanhamento personalizado desde a matrícula até o dia do exame
-              prático aplicado pelo DETRAN.
+              prático oficial.
             </p>
           </div>
           <p className="mt-6 rounded-xl border border-navy/15 bg-white/70 p-4 text-sm leading-relaxed text-navy">
             <strong>Transparência:</strong> somos um Centro de Formação de Condutores (CFC) privado,
-            credenciado ao DETRAN sob o nº 027. Os exames oficiais, a emissão da CNH e as taxas
-            públicas são de responsabilidade exclusiva dos órgãos de trânsito.
+            credenciado sob o nº 027. Os exames oficiais, a emissão da CNH e as taxas
+            estatais são de responsabilidade exclusiva do órgão oficial de trânsito.
           </p>
         </div>
       </div>

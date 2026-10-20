@@ -14,7 +14,7 @@ export const BUSINESS = {
   cfcNumber: "027",
   badge: "Autoescola Essencial — CFC Privado Credenciado nº 027",
   disclaimer:
-    "A Autoescola Essencial é uma empresa privada, Centro de Formação de Condutores (CFC) credenciado ao DETRAN sob o nº 027. Serviços e taxas públicas são de competência exclusiva dos órgãos oficiais.",
+    "A Autoescola Essencial é uma empresa privada, Centro de Formação de Condutores (CFC) credenciado sob o nº 027. Serviços e taxas estatais são de responsabilidade exclusiva dos órgãos competentes.",
   address: {
     street: "Avenida Antônio Batista Piva, 2.740, sala 2",
     district: "Parque Bom Retiro",
@@ -27,14 +27,11 @@ export const BUSINESS = {
     { label: "(19) 3884-2501", href: "tel:+551938842501" },
     { label: "(19) 99901-7200", href: "tel:+5519999017200" },
   ],
-  // TODO: confirmar e-mail oficial com o cliente
-  email: "contato@autoescolaessencial.com.br",
   hours: ["Segunda a sexta: 7h50 às 18h", "Sábado: 7h50 às 12h"],
   social: {
     instagram: "https://www.instagram.com/autoescolaessencial2/",
     facebook: "https://www.facebook.com/profile.php?id=61573312199921",
   },
-  detranUrl: "https://www.detran.sp.gov.br",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Av.+Ant%C3%B4nio+Batista+Piva%2C+2740+-+Parque+Bom+Retiro%2C+Paul%C3%ADnia+-+SP%2C+13142-070",
   mapsEmbed:

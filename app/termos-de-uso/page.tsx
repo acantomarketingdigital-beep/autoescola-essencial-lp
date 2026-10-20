@@ -22,20 +22,17 @@ export default function TermosDeUso() {
       <h2>1. Natureza da empresa</h2>
       <p>{BUSINESS.disclaimer}</p>
       <p>
-        A Autoescola Essencial <strong>não é</strong> o DETRAN, nem representa qualquer órgão
-        público. Não aplicamos exames oficiais, não emitimos a Carteira Nacional de Habilitação
-        (CNH) e não arrecadamos taxas públicas. Para serviços oficiais, acesse o{" "}
-        <a href={BUSINESS.detranUrl} target="_blank" rel="noopener noreferrer">
-          site oficial do DETRAN-SP
-        </a>
-        .
+        A Autoescola Essencial <strong>não é</strong> um órgão público, nem representa qualquer
+        órgão de trânsito. Não aplicamos exames oficiais, não emitimos a Carteira Nacional de
+        Habilitação (CNH) e não arrecadamos taxas estatais. Para serviços oficiais, procure
+        diretamente o órgão oficial de trânsito.
       </p>
 
       <h2>2. Finalidade do site</h2>
       <p>
         Este site tem caráter informativo sobre os serviços privados de formação de condutores
         oferecidos pela Autoescola Essencial (aulas teóricas e práticas, preparação para o exame
-        prático do DETRAN e encaminhamento do aluno, adição de categoria e aulas para
+        prático oficial e encaminhamento do aluno, adição de categoria e aulas para
         habilitados). As informações não constituem oferta vinculante; valores e condições são
         informados individualmente pelos canais oficiais de atendimento.
       </p>
@@ -45,14 +42,13 @@ export default function TermosDeUso() {
         A aprovação nos exames oficiais depende do desempenho do candidato e das regras e
         avaliações dos órgãos de trânsito. A Autoescola Essencial se compromete com a qualidade
         da formação, mas não garante aprovação nem prazos de emissão da CNH, que são de
-        competência do DETRAN.
+        competência do órgão oficial de trânsito.
       </p>
 
       <h2>4. Canais oficiais de contato</h2>
       <p>
         Nossos únicos canais oficiais são: WhatsApp e telefones{" "}
-        {BUSINESS.phones.map((p) => p.label).join(" / ")}, e-mail{" "}
-        <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a> e atendimento presencial no
+        {BUSINESS.phones.map((p) => p.label).join(" / ")} e atendimento presencial no
         endereço acima. Não solicitamos senhas, dados bancários ou pagamentos de taxas públicas
         por meio deste site.
       </p>
@@ -65,9 +61,8 @@ export default function TermosDeUso() {
 
       <h2>6. Links de terceiros</h2>
       <p>
-        O site pode conter links para serviços de terceiros (WhatsApp, Google Maps, redes sociais
-        e sites oficiais). Não nos responsabilizamos pelo conteúdo ou pelas práticas de
-        privacidade desses serviços.
+        O site pode conter links para serviços de terceiros (WhatsApp, Google Maps e redes sociais). Não
+        nos responsabilizamos pelo conteúdo ou pelas práticas de privacidade desses serviços.
       </p>
 
       <h2>7. Privacidade</h2>

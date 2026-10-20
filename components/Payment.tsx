@@ -26,7 +26,7 @@ export function Payment() {
         <div>
           <p className="text-sm text-white/85">
             Parcelamento conforme condições da empresa. Pagamentos referem-se apenas aos serviços
-            da autoescola; taxas do DETRAN são pagas diretamente ao órgão.
+            da autoescola; taxas estatais são pagas diretamente aos órgãos competentes.
           </p>
           <a {...whatsappLinkProps} className="btn-sun mt-4">
             Consultar condições
