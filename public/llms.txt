@@ -1,0 +1,33 @@
+# Autoescola Essencial
+
+> Autoescola Essencial é uma empresa privada, Centro de Formação de Condutores (CFC) credenciado sob o nº 027, localizada em Paulínia/SP. Oferece aulas para habilitação (CNH) nas categorias A, B e A+B, adição de categoria e aulas para habilitados, em carro e moto manuais ou automáticos. Serviços e taxas estatais são de responsabilidade exclusiva dos órgãos competentes.
+
+## Dados da empresa
+
+- Nome fantasia: Autoescola Essencial
+- Razão social: CENTRO DE FORMACAO DE CONDUTORES A&B SANTOS & MILEO LTDA
+- CNPJ: 36.670.858/0001-00
+- Credenciamento: CFC nº 027
+- Endereço: Avenida Antônio Batista Piva, 2.740, sala 2, Parque Bom Retiro — Paulínia/SP, CEP 13142-070
+- Telefone: (19) 3884-2501
+- WhatsApp: (19) 99901-7200 — https://wa.me/5519999017200
+- Horário: segunda a sexta, 7h50 às 18h; sábado, 7h50 às 12h
+- Região atendida: Paulínia, Sumaré, Hortolândia e cidades vizinhas
+- Site: https://autoescolaessencial.com.br
+
+## Serviços
+
+- Primeira habilitação — Categoria A (moto), com motos manuais e automáticas (primeira autoescola de Paulínia com moto automática para aulas)
+- Primeira habilitação — Categoria B (carro), com carros manuais e automáticos
+- Primeira habilitação — Categoria A+B (carro e moto)
+- Adição de categoria para quem já possui CNH
+- Aulas para habilitados (perda do medo de dirigir, retomada da confiança)
+- Pacotes de 2, 5 ou 10 aulas + veículo para reforço antes do exame prático
+- Formas de pagamento: PIX, cartão de crédito, cartão de débito e dinheiro
+- Valores: informados pelo WhatsApp; não incluem taxas estatais
+
+## Páginas
+
+- [Página inicial](https://autoescolaessencial.com.br/): serviços, como funciona, estrutura, avaliações, perguntas frequentes e localização
+- [Política de Privacidade](https://autoescolaessencial.com.br/politica-de-privacidade): tratamento de dados conforme a LGPD
+- [Termos de Uso](https://autoescolaessencial.com.br/termos-de-uso): natureza da empresa e condições de uso do site

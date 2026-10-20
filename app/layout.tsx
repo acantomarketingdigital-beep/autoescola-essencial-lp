@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 import { BUSINESS, SITE_URL } from "@/lib/site";
+import { jsonLd, localBusinessSchema } from "@/lib/schema";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -16,9 +17,9 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const title = "Autoescola Essencial | CFC Credenciado nº 027 em Paulínia/SP";
+const title = "Autoescola Essencial em Paulínia | CFC Credenciado nº 027";
 const description =
-  "Autoescola Essencial, CFC privado credenciado nº 027 em Paulínia/SP. Aulas para habilitação nas categorias A, B e A+B, adição de categoria e aulas para habilitados, em carro e moto manuais ou automáticos.";
+  "Autoescola em Paulínia/SP, CFC credenciado nº 027. CNH categorias A, B e A+B, adição de categoria e aulas para habilitados, com carro e moto automáticos.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -27,8 +28,23 @@ export const metadata: Metadata = {
     template: "%s | Autoescola Essencial",
   },
   description,
+  keywords: [
+    "autoescola Paulínia",
+    "autoescola em Paulínia",
+    "CFC Paulínia",
+    "CNH Paulínia",
+    "habilitação Paulínia",
+    "carteira de motorista Paulínia",
+    "autoescola carro automático",
+    "autoescola moto automática",
+    "adição de categoria",
+    "aulas para habilitados",
+    "Autoescola Essencial",
+  ],
   applicationName: BUSINESS.name,
+  category: "education",
   alternates: { canonical: "/" },
+  // og:image / twitter:image vêm de app/opengraph-image.png e app/twitter-image.png (1200x630)
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -36,62 +52,28 @@ export const metadata: Metadata = {
     siteName: BUSINESS.name,
     title,
     description,
-    images: [
-      {
-        url: "/img/fachada.png",
-        width: 768,
-        height: 1024,
-        alt: "Fachada da Autoescola Essencial em Paulínia/SP",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/img/fachada.png"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
   themeColor: "#0B3474",
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "DrivingSchool",
-  name: BUSINESS.name,
-  legalName: BUSINESS.legalName,
-  taxID: BUSINESS.cnpj,
-  url: SITE_URL,
-  logo: `${SITE_URL}/img/logo.png`,
-  image: `${SITE_URL}/img/fachada.png`,
-  telephone: "+55-19-3884-2501",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: BUSINESS.address.street,
-    addressLocality: BUSINESS.address.city,
-    addressRegion: BUSINESS.address.state,
-    postalCode: BUSINESS.address.zip,
-    addressCountry: "BR",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:50",
-      closes: "18:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "07:50",
-      closes: "12:00",
-    },
-  ],
-  sameAs: [BUSINESS.social.instagram, BUSINESS.social.facebook],
 };
 
 export default function RootLayout({
@@ -111,10 +93,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(localBusinessSchema)} />
       </body>
     </html>
   );

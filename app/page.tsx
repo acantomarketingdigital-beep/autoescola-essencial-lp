@@ -2,7 +2,7 @@ import { About } from "@/components/About";
 import { Automatic } from "@/components/Automatic";
 import { Categories } from "@/components/Categories";
 import { Differentials } from "@/components/Differentials";
-import { Faq } from "@/components/Faq";
+import { Faq, faqs } from "@/components/Faq";
 import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -16,12 +16,14 @@ import { Reviews } from "@/components/Reviews";
 import { StatsBar } from "@/components/StatsBar";
 import { Structure } from "@/components/Structure";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { faqSchema, jsonLd } from "@/lib/schema";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      {/* overflow-x-hidden: fallback para navegadores sem suporte a overflow-x: clip */}
+      <main className="overflow-x-hidden">
         <Hero />
         <StatsBar />
         <About />
@@ -40,6 +42,7 @@ export default function Home() {
       <Footer />
       <WhatsAppFloat />
       <RevealObserver />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(faqSchema(faqs))} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { ArrowRight, Plus } from "lucide-react";
 import { BUSINESS, whatsappLinkProps } from "@/lib/site";
 
-const faqs = [
+export const faqs = [
   {
     q: "Quais categorias a Essencial oferece?",
     a: "Primeira habilitação nas categorias A, B e A+B, além de adição de categoria e aulas para habilitados.",

@@ -6,6 +6,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Impede rolagem lateral causada por elementos deslocados nas animações de entrada.
+   "clip" (ao contrário de "hidden") não quebra o header sticky. */
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   @apply bg-white font-sans text-ink antialiased;
 }
