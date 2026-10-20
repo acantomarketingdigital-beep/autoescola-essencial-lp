@@ -52,6 +52,24 @@ export function Footer() {
             Termos de Uso
           </Link>
         </nav>
+
+        <a
+          href="https://pulse.kreotechnologies.com.br/comece"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-2 rounded-full border border-mist bg-white py-1 pl-1 pr-3 text-[11px] text-ink transition-transform duration-200 ease-out motion-safe:hover:scale-105"
+        >
+          <Image
+            src="/img/pulse.png"
+            alt="Pulse CRM & Dashboard"
+            width={64}
+            height={64}
+            className="h-6 w-6 rounded-full"
+          />
+          <span>
+            Desenvolvido por <strong className="font-semibold text-navy">Pulse CRM &amp; Dashboard</strong>
+          </span>
+        </a>
       </div>
     </footer>
   );
