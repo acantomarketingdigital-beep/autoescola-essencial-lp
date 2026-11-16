@@ -1,12 +1,11 @@
 /**
  * Helper de rastreamento de conversões.
- * Dispara o evento generate_lead na tag do Google (gtag.js) de forma síncrona e nunca
+ * Faz o push do evento generate_lead na Data Layer (GTM) de forma síncrona e nunca
  * bloqueia a navegação: o link segue abrindo o WhatsApp normalmente.
  */
 declare global {
   interface Window {
-    dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
+    dataLayer?: Record<string, unknown>[];
   }
 }
 
@@ -20,7 +19,9 @@ export function trackWhatsAppLead({ button_location, button_text, service_catego
   if (typeof window === "undefined") return;
 
   try {
-    window.gtag?.("event", "generate_lead", {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "generate_lead",
       lead_type: "whatsapp_click",
       button_location,
       button_text,
